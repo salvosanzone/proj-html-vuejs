@@ -6,7 +6,7 @@
         get a free quote
       </div>
     </section>
-    <section class="award winning">
+    <section class="award-winning">
       <div class="center-container">
         award winning
       </div>
@@ -46,16 +46,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars.scss";
 @import '../assets/style/mixins.scss';
 
   main{
     .get-free-quote{
       height: 100px;
-      background-color: #1975c0;
+      background-color: $denim;
     }
     .award-winning{
       height: 445px;
-      background-color: #e9e9e9;
+      background-image: linear-gradient(white, $mercury);
     }
     .full-service{
       height: 670px;

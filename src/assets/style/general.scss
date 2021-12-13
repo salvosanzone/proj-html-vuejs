@@ -2,19 +2,35 @@
 @import'~@fontsource/lato/index.css';
 
 body{
-  font-family: $font;
+  font-family: $main-font;
+  font-size: 10px;
 }
 
 //da eliminare
 .container{
-  border: 1px solid black;
+  width: 70%;
   
 }
 
 .center-container{
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  border: 1px solid black;
+  width: 35%;
+  // display: flex;
+  // justify-content: center;
+  // margin: 0 auto;
+  // border: 1px solid black;
 }
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btn-small{
+  padding: 6px 24px;
+  background-color: $denim;
+  color: white;
+  border: none;
+  border-radius: 15px;
+}
+
+//colour palette 

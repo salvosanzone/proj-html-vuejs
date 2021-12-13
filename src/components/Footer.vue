@@ -22,16 +22,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/vars.scss";
 @import '../assets/style/mixins.scss';
 
   footer{
     .top-footer{
       height: 300px;
-      border-top: 10px solid #6bbb14;
+      border-top: 10px solid $lima;
     }
     .bottom-footer{
       height: 95px;
-      background-color: #69bf14;
+      background-color: $lima;
     }
   }
 
