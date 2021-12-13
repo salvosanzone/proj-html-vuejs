@@ -1,14 +1,14 @@
-@mixin flex($type){
+@mixin flex($type) {
   display: flex;
-  @if$type == 'between'{
+  @if$type == 'between' {
     justify-content: space-between;
-  }@else if  $type == 'center'{
+  } @else if $type == "center" {
     justify-content: center;
     align-items: center;
-}
+  }
 }
 
-@mixin background($type){
+@mixin background($type) {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

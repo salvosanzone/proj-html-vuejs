@@ -10,10 +10,18 @@
           <span>Call us for a Free Quote 1.800.555.67.89</span>
         </div>
         <div>
-          <i class="fab fa-facebook-f me-3"></i>
-          <i class="fab fa-twitter me-3"></i>
-          <i class="fab fa-instagram me-3"></i>
-          <i class="fab fa-youtube me-3"></i>
+          <a href="">
+            <i class="fab fa-facebook-f me-3"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-twitter me-3"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-instagram me-3"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-youtube me-3"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -57,7 +65,7 @@
           </div>
         </div>
       </div> 
-      <div class="center-container d-flex flex-column align-items-center">
+      <div class="small-container">
         <span>MOVING WITHOUT THE HASSLE</span>
         <h2>WE MAKE IT SIMPLE</h2>
         <span>PROFESSIONAL SERVICE WITH QUALITY AND CUSTOMER SATISFATION</span>
@@ -87,7 +95,7 @@ header {
       @include flex("between");
       //border: 1px solid black;
       a {
-        color: white;
+        color: $white;
       }
     }
   }
@@ -108,11 +116,11 @@ header {
         a {
           text-decoration: none;
           margin: 0 12px;
-          color: black;
+          color: $black;
         }
       }
     }
-    .center-container {
+    .small-container {
       margin: 0 auto;
       span{
         color: $oslo-gray;

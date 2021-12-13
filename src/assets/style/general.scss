@@ -6,16 +6,24 @@ body{
   font-size: 10px;
 }
 
-//da eliminare
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .container{
   width: 70%;
   
 }
 
-.center-container{
+.small-container{
   width: 35%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   
 }
 
@@ -29,6 +37,14 @@ img{
   background-color: $denim;
   color: white;
   border: none;
+  border-radius: 15px;
+}
+
+.btn-big{
+  background-color: $denim-vibrant;
+  color: white;
+  border: none;
+  padding: 6px 34px;
   border-radius: 15px;
 }
 
