@@ -2,8 +2,9 @@
 
   <main>
     <section class="get-free-quote">
-      <div class="center-container ">
-        get a free quote
+      <div class="center-container align-items-center">
+          <i class="fab fa-telegram-plane me-3"></i>
+        <span>GET A FREE QUOTE ONLINE NOW!</span>
       </div>
     </section>
     <section class="award-winning">
@@ -53,6 +54,12 @@ export default {
     .get-free-quote{
       height: 100px;
       background-color: $denim;
+      @include flex('center');
+      span{
+        color: white;
+        font-size: 12px;
+
+      }
     }
     .award-winning{
       height: 445px;
