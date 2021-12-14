@@ -14,7 +14,7 @@
         <span>HEADACHE FREE</span>
         <h2>Award Winning</h2>
         <h2>Moving Company</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta in illo earum aspernatur pariatur ea iste nihil officia ipsam veritatis. Necessitatibus non temporibus iure fugiat officiis rem inventore natus iste.</p>
+        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta in illo earum aspernatur pariatur ea iste nihil officia ipsam veritatis. Necessitatibus non temporibus iure fugiat officiis rem inventore natus iste.</p>
         <button class="btn-big">REAR OUR TESTIMONIALS</button>
       </div>
     </section>
@@ -98,7 +98,9 @@
     </section>
     <section class="request-free-quote">
       <div class="small-container">
-        request a free quote
+        <h2>Request A Free Quote</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt tenetur architecto quaerat consectetur accusamus amet minima consequatur perspiciatis! Alias at asperiores nisi. Cupiditate ullam cum eum earum minima, quam ut.</p>
+        <button class="btn-small">CLICK HERE</button>
       </div>
     </section>
   </main>
@@ -194,6 +196,7 @@ export default {
       height: 370px;
       background-image: url(../assets/img/avada-movers-request-quote-background.jpg);
       @include background('');
+      background-size: cover;
 
     }
   }
