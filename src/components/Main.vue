@@ -24,36 +24,11 @@
         <h2>Full-Service Solution</h2>
       </div>
       <div class="big-container">
-        <div class="card">
-          <div class="pic-card d-flex justify-content-center">
-            <img src="../assets/img/avada-movers-serviceonephoto-final-400x255.jpg" alt="">
-          </div>
-          <div class="text-card text-center">
-            <h5>Two Man Teams</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis aspernatur odio suscipit asperiores eaque unde, minus repellendus eveniet repellat dicta perferendis? Eaque architecto doloremque incidunt assumenda vel necessitatibus ipsam.</p>
-            <button class="btn-small">READ MORE</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="pic-card d-flex justify-content-center">
-            <img src="../assets/img/avada-movers-servicetwophoto-final-400x255.jpg" alt="">
-          </div>
-          <div class="text-card text-center">
-            <h5>Two Man Teams</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis aspernatur odio suscipit asperiores eaque unde, minus repellendus eveniet repellat dicta perferendis? Eaque architecto doloremque incidunt assumenda vel necessitatibus ipsam.</p>
-            <button class="btn-small">READ MORE</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="pic-card d-flex justify-content-center">
-            <img src="../assets/img/avada-movers-servicethreephoto-final-400x255.jpg" alt="">
-          </div>
-          <div class="text-card text-center">
-            <h5>Two Man Teams</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis aspernatur odio suscipit asperiores eaque unde, minus repellendus eveniet repellat dicta perferendis? Eaque architecto doloremque incidunt assumenda vel necessitatibus ipsam.</p>
-            <button class="btn-small">READ MORE</button>
-          </div>
-        </div>
+        <Card 
+          v-for="card in cardList" 
+          :key="card.id"
+          :cardData="card"
+        />
       </div>
     </section>
     <section class="move-with-ease">
@@ -72,27 +47,11 @@
         <h2>Testimonials</h2>
       </div>
       <div class="big-container my-5">
-        <div class="small-container mx-5">
-          <div class="testimonial-pic">
-            <img src="../assets/img/avada-movers-johndoe-final-200x200.jpg" alt="">
-          </div>
-          <h5>John Doe</h5>
-          <p class="text-center">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut accusantium deserunt esse sapiente consequuntur."</p>
-        </div>
-        <div class="small-container mx-5">
-          <div class="testimonial-pic">
-            <img src="../assets/img/avada-movers-janedoe-final-200x200.jpg" alt="">
-          </div>
-          <h5>Jane Doe</h5>
-          <p class="text-center">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut accusantium deserunt esse sapiente consequuntur."</p>
-        </div>
-        <div class="small-container mx-5">
-          <div class="testimonial-pic">
-            <img src="../assets/img/avada-movers-johnsmith-final-200x200.jpg" alt="">
-          </div>
-          <h5>John Smith</h5>
-          <p class="text-center">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut accusantium deserunt esse sapiente consequuntur."</p>
-        </div>
+        <Testimonials 
+          v-for="(testimonial, index) in testimonialsList"
+          :key="index"
+          :testimonialData="testimonial"
+        />
       </div>
       <button class="btn-big">READ MORE TESTIMONIALS</button>
     </section>
@@ -108,8 +67,50 @@
 </template>
 
 <script>
+import Card from './Cards.vue'
+import Testimonials from './Testimonials.vue'
 export default {
-  name: 'Main'
+  name: 'Main',
+  components:{
+    Card,
+    Testimonials
+  },
+  data(){
+    return{
+      cardList: [
+        {
+          photo: "serviceonephoto-final-400x255.jpg",
+          title: 'Two Man Teams',
+          id: 1
+        },
+        {
+          photo: "servicetwophoto-final-400x255.jpg",
+          title: 'We Do All The Lifting',
+          id: 2
+        },
+        {
+          photo: "servicethreephoto-final-400x255.jpg",
+          title: 'Coast To Coast',
+          id: 3
+        },
+      ],
+
+      testimonialsList: [
+        {
+          photo: "johndoe-final-200x200.jpg",
+          name: 'John Doe'
+        },
+        {
+          photo: "janedoe-final-200x200.jpg",
+          name: 'Jane Doe'
+        },
+        {
+          photo: "johnsmith-final-200x200.jpg",
+          name: 'John Smith'
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -159,29 +160,6 @@ export default {
       }
       .big-container{
         @include flex('');
-        .card{
-          display: flex;
-          justify-content: space-between;
-          width: calc(100% / 3 - 17px);
-          height: 415px;
-          margin: 0 17px;
-          padding: 15px;
-          background-color: rgba($color: $mercury, $alpha: .4);
-          border-color: $white;
-        }
-        .text-card{
-          padding: 22px 17px;
-          background-color: $white;
-          h5{
-            color: $denim-vibrant;
-            font-weight: 700;
-          }
-          p{
-            color: $oslo-gray;
-            font-weight: 800;
-          }
-        }
-
       }
     }
     .move-with-ease{
@@ -242,20 +220,6 @@ export default {
       }
       .big-container{
         @include flex('');
-        .testimonial-pic{
-          width: 100px;
-          height: 100px;
-          overflow: hidden;
-          border-radius: 50%;
-        }
-        .small-container{
-          h5{
-            color: $denim-vibrant;
-            font-weight: 700;
-            margin: 15px 0;
-          }
-        }
-
       }
       
     }
