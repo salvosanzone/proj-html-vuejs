@@ -1,38 +1,37 @@
-@import'~bootstrap/scss/bootstrap.scss';
-@import'~@fontsource/lato/index.css';
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~@fontsource/lato/index.css";
 
-body{
+body {
+  min-width: 1200px;
   font-family: $main-font;
   font-size: 10px;
 }
 
-section{
+section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.big-container{
+.big-container {
   width: 70%;
-  
 }
 
-.small-container{
+.small-container {
   width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 
-img{
+img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.btn-small{
+.btn-small {
   padding: 6px 24px;
   background-color: $denim;
   color: white;
@@ -41,17 +40,16 @@ img{
   font-weight: 700;
 }
 
-.btn-big{
+.btn-big {
   background-color: $denim-vibrant;
   color: white;
   border: none;
   padding: 6px 34px;
   border-radius: 15px;
   font-weight: 700;
-
 }
 
-i{
+i {
   color: white;
 }
 
@@ -60,7 +58,6 @@ ul li {
   margin: 0 18px;
 }
 
-a{
+a {
   text-decoration: none;
 }
-

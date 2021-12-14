@@ -12,21 +12,34 @@
         </div>
         <div class="small-container align-items-start justify-content-around">
           <span>AVADA MOVERS</span>
-          <span><i class="fas fa-chevron-right active"></i><a class="active" href="">Home</a></span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Rates</a> </span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Testimonials</a></span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Blog</a></span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Free Quote</a></span>
-          
+          <span 
+            v-for="item in avadaMovers" 
+            :key="item.id"
+            
+          >
+            <i class="fas fa-chevron-right active"></i>
+            <a 
+              :class="{active: item.actived === true}" 
+              @click="item.actived = !item.active"
+              :href="item.name"
+            >
+              {{item.name}}
+            </a>
+          </span>
         </div>
         <div class="small-container align-items-start justify-content-around">
           <span>RECENT POSTS</span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Heading Out To College?</a></span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Moving Your Business?</a></span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Outstanding Quality</a></span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Cost Of Moving</a></span>
-          <span><i class="fas fa-chevron-right"></i> <a href="">Best Moving Tips</a></span>
-          
+          <span 
+            v-for="(item, index) in recentPosts" 
+            :key="index"
+          >
+            <i class="fas fa-chevron-right"></i> 
+            <a 
+              :href="item.name"
+            >
+              {{item.name}}
+          </a>
+          </span>
         </div>
         
       </div>
@@ -61,7 +74,13 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  
+  props:{
+  //Footer riceve da App due array tramite le props
+    avadaMovers: Array,
+    recentPosts: Array
+  }
 }
 </script>
 

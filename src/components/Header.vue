@@ -36,25 +36,18 @@
           <div class="col-11 d-flex justify-content-end">
             <div class="menu">
               <ul class="d-flex justify-content-center align-items-center">
-                <li>
-                  <a class="active" href="">  Home </a>
+                <li 
+                  v-for="item in menu" 
+                  :key="item.id"
+                >
+                  <a 
+                    :class="{active: item.actived === true}"
+                    @click="item.actived = !item.actived" 
+                    :href="item.name"
+                  >
+                    {{item.name}}
+                  </a>
                 </li>
-                <li>
-                  <a href="">  Rates  </a>
-                </li>
-                <li>
-                  <a href="">  Testimonials </a>
-                </li>
-                <li>
-                  <a href=""> FAQ </a>
-                </li>
-                <li>
-                  <a href=""> Blog </a>
-                </li>
-                <li>
-                  <a href="">  Contact  </a>
-                </li>
-                
                 <li>
                   <a href="">
                     <button class="btn-small">  FREE QUOTE </button>
@@ -78,6 +71,10 @@
 <script>
 export default {
   name: "Header",
+  //Header riceve da App un array tramite la props
+  props:{
+    menu: Array
+  }
 };
 </script>
 

@@ -1,8 +1,13 @@
 <template>
   <div>  
-    <Header />
+    <Header 
+      :menu="menuHeader"
+    />
     <Main />
-    <Footer />
+    <Footer 
+      :avadaMovers="avadaMoversList" 
+      :recentPosts="recentPostsList"
+    />
   </div>
 
 </template>
@@ -18,6 +23,89 @@ export default {
     Header,
     Main,
     Footer
+
+  },
+  data(){
+    return {
+      //creo tre array che invio tramite le props
+      menuHeader: [
+        {
+          name: 'Home',
+          id: 1,
+          actived: true
+        },
+        {
+          name: 'Rates',
+          id: 2,
+          aactived: false
+          
+        },
+        {
+          name: 'Testimonials',
+          id: 3,
+          actived: false
+        },
+        {
+          name: 'FAQ',
+          id: 4,
+          actived: false
+        },
+        {
+          name: 'Blog',
+          id: 5,
+          actived: false
+        },
+        {
+          name: 'Contact',
+          id: 6,
+          actived: false
+        },
+      ],
+      avadaMoversList: [
+        {
+          name: 'Home',
+          id: 1,
+          actived: true
+        },
+        {
+          name: 'Rates',
+          id: 2,
+          actived: false
+        },
+        {
+          name: 'Testimonials',
+          id: 3,
+          actived: false
+        },
+        {
+          name: 'Blog',
+          id: 4,
+          actived: false
+        },
+        {
+          name: 'Free Quote',
+          id: 5,
+          actived: false
+        },
+      ],
+      recentPostsList: [
+        {
+          name: 'Heading Out To College?',
+        },
+        {
+          name: 'Moving Your Business?',
+        },
+        {
+          name: 'Outstanding Quality',
+        },
+        {
+          name: 'Cost Of Moving',
+        },
+        {
+          name: 'Best Moving Tips',
+        },
+      ]
+    }
   }
 }
 </script>
