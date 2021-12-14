@@ -4,7 +4,7 @@
     <div class="top-footer">
       <div class="big-container">
         <div class="small-container align-items-start me-5 justify-content-around">
-          <span>ABOUT</span>
+          <span class="">ABOUT</span>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod amet repellat vero placeat fugit et commodi nulla exercitationem excepturi, officiis ullam explicabo quo voluptas, accusantium quos illum veritatis harum in.</p>
           <div class="logo-footer">
             <img src="../assets/img/avada-movers-retinalogo.png" alt="">
@@ -73,7 +73,27 @@ export default {
         @include flex('');
         .logo-footer{
           width: 120px;
-        }
+          }
+          .small-container{
+            span{
+              font-weight: 800;
+              font-size: 12px;
+              margin-bottom: 15px;
+              i{
+                color: $river-bed;
+                margin-right: 2px;
+              }
+              a{
+                font-weight: normal;
+
+              }
+            }
+            p{
+              font-weight: 700;
+              color: $river-bed;
+            }
+          }
+        
         i, a{
           color: $black;
         }
@@ -85,7 +105,11 @@ export default {
       @include flex('center');
       height: 95px;
       background-color: $lima;
-      
+      .small-container{
+        a{
+          font-size: 13px;
+        }
+      }
     }
   }
 

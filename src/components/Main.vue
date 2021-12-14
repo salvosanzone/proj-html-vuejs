@@ -271,7 +271,7 @@ export default {
         }
         p{
           color: $river-bed;
-          font-weight: 800;
+          font-weight: 700;
         }
       }
 
