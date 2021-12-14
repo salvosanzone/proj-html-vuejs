@@ -37,7 +37,7 @@
             <div class="menu">
               <ul class="d-flex justify-content-center align-items-center">
                 <li>
-                  <a href="">  Home </a>
+                  <a class="active" href="">  Home </a>
                 </li>
                 <li>
                   <a href="">  Rates  </a>
@@ -97,6 +97,7 @@ header {
       a {
         color: $white;
       }
+      
     }
   }
   .bottom-header {
@@ -113,6 +114,9 @@ header {
       a{
         color: $black;
         font-weight: 800;
+      }
+      a.active{
+       color: $mantis !important;
       }
     }
     .text-bottom-header{

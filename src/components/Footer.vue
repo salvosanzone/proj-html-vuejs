@@ -12,7 +12,7 @@
         </div>
         <div class="small-container align-items-start justify-content-around">
           <span>AVADA MOVERS</span>
-          <span><i class="fas fa-chevron-right"></i><a href="">Home</a></span>
+          <span><i class="fas fa-chevron-right active"></i><a class="active" href="">Home</a></span>
           <span><i class="fas fa-chevron-right"></i> <a href="">Rates</a> </span>
           <span><i class="fas fa-chevron-right"></i> <a href="">Testimonials</a></span>
           <span><i class="fas fa-chevron-right"></i> <a href="">Blog</a></span>
@@ -48,6 +48,11 @@
             <i class="fab fa-youtube me-3"></i>
           </a>
         </div>
+      </div>
+      <div class="get-back-arrow">
+        <a href="">
+          <i class="fas fa-chevron-up"></i>
+        </a>
       </div>
     </div>
   </footer>
@@ -102,6 +107,7 @@ export default {
       }
     }
     .bottom-footer{
+      position: relative;
       @include flex('center');
       height: 95px;
       background-color: $lima;
@@ -109,6 +115,22 @@ export default {
         a{
           font-size: 13px;
         }
+      }
+    }
+    a.active{
+      color: $mantis !important;
+    }
+    .get-back-arrow{
+      position: absolute;
+      bottom: 0;
+      right: 50px;
+      width: 32px;
+      height: 20px;
+      @include flex('center');
+      background-color: $river-bed;
+      border-radius: 2px;
+      i{
+        color: $mercury;
       }
     }
   }
