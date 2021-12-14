@@ -1,4 +1,5 @@
 <template>
+
   <div>  
     <Header 
       :menu="menuHeader"
@@ -31,7 +32,7 @@ export default {
   },
   data(){
     return {
-      //creo tre array che invio tramite le props
+      //creo tre array che invio tramite le props ad Header e Footer
       menuHeader,
       avadaMoversList,
       recentPostsList 

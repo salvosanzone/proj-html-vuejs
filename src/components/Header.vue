@@ -1,6 +1,7 @@
 <template>
 
   <header>
+    <!-- TOP HEADER -->
     <div class="top-header">
       <div class="big-container">
         <div>
@@ -25,6 +26,9 @@
         </div>
       </div>
     </div>
+    <!-- /TOP HEADER -->
+
+    <!-- BOTTOM HEADER -->
     <div class="bottom-header d-flex align-items-center flex-column">
       <div class="menu-bottom-header big-container">
         <div class="row align-items-baseline">
@@ -40,17 +44,17 @@
                   v-for="item in menu" 
                   :key="item.id"
                 >
-                  <a 
-                    :class="{active: item.actived === true}"
-                    @click="item.actived = !item.actived" 
+                  <a
+                    :class="{ active: item.actived === true }"
+                    @click="item.actived = !item.actived"
                     :href="item.name"
                   >
-                    {{item.name}}
+                    {{ item.name }}
                   </a>
                 </li>
                 <li>
                   <a href="">
-                    <button class="btn-small">  FREE QUOTE </button>
+                    <button class="btn-small">FREE QUOTE</button>
                   </a>
                 </li>
               </ul>
@@ -59,11 +63,12 @@
         </div>
       </div>
       <div class="text-bottom-header small-container">
-          <span>MOVING WITHOUT THE HASSLE</span>
-          <h2>WE MAKE IT SIMPLE</h2>
-          <span>PROFESSIONAL SERVICE WITH QUALITY AND CUSTOMER SATISFATION</span>
+        <span>MOVING WITHOUT THE HASSLE</span>
+        <h2>WE MAKE IT SIMPLE</h2>
+        <span>PROFESSIONAL SERVICE WITH QUALITY AND CUSTOMER SATISFATION</span>
       </div>
     </div>
+    <!-- /BOTTOM HEADER -->
   </header>
 
 </template>
@@ -72,9 +77,9 @@
 export default {
   name: "Header",
   //Header riceve da App un array tramite la props
-  props:{
-    menu: Array
-  }
+  props: {
+    menu: Array,
+  },
 };
 </script>
 
@@ -86,7 +91,7 @@ export default {
 header {
   .top-header {
     height: 30px;
-    @include flex('center');
+    @include flex("center");
     background-color: $lima;
     color: white;
     .big-container {
@@ -94,7 +99,6 @@ header {
       a {
         color: $white;
       }
-      
     }
   }
   .bottom-header {
@@ -104,31 +108,33 @@ header {
     @include background("");
     background-size: 125%;
     position: relative;
-    .menu-bottom-header{
-      .logo{
+    .menu-bottom-header {
+      .logo {
         width: 120px;
       }
-      a{
+      a {
         color: $black;
         font-weight: 800;
+        &:hover {
+          color: $mantis;
+        }
       }
-      a.active{
-       color: $mantis !important;
+      a.active {
+        color: $mantis !important;
       }
     }
-    .text-bottom-header{
+    .text-bottom-header {
       position: absolute;
       top: 50%;
-      span{
+      span {
         color: $river-bed;
         font-weight: 800;
       }
-      h2{
+      h2 {
         font-weight: 800;
         font-size: 40px;
       }
     }
-    
   }
 }
 </style>

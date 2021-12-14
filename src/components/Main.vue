@@ -1,6 +1,7 @@
 <template>
 
   <main>
+    <!-- SECTION GET FREE QUOTE -->
     <section class="get-free-quote">
       <div class="small-container flex-row">
         <a href="">
@@ -9,6 +10,9 @@
         <span>GET A FREE QUOTE ONLINE NOW!</span>
       </div>
     </section>
+    <!-- /SECTION GET FREE QUOTE -->
+
+    <!-- SECTION AWARD WINNING -->
     <section class="award-winning">
       <div class="small-container">
         <span>HEADACHE FREE</span>
@@ -18,6 +22,9 @@
         <button class="btn-big">REAR OUR TESTIMONIALS</button>
       </div>
     </section>
+    <!-- /SECTION AWARD WINNING -->
+
+    <!-- SECTION FULL SERVICE -->
     <section class="full-service">
       <div class="small-container">
         <span>WE ARE A PROFESSIONAL</span>
@@ -31,6 +38,9 @@
         />
       </div>
     </section>
+    <!-- /SECTION FULL SERVICE -->
+
+    <!-- SECTION MOVE WITH EASE -->
     <section class="move-with-ease">
       <div class="big-container">
         <div class="content flex-column">
@@ -41,6 +51,9 @@
         </div>
       </div>
     </section>
+    <!-- /SECTION MOVE WITH EASE -->
+
+    <!-- SECTION TESTIMONIALS -->
     <section class="testimonials">
       <div class="small-container">
         <span>HAPPY CUSTOMERS</span>
@@ -48,13 +61,16 @@
       </div>
       <div class="big-container my-5">
         <Testimonials 
-          v-for="(testimonial, index) in testimonialsList"
-          :key="index"
-          :testimonialData="testimonial"
+            v-for="(testimonial, index) in testimonialsList"
+            :key="index"
+            :testimonialData="testimonial"
         />
       </div>
       <button class="btn-big">READ MORE TESTIMONIALS</button>
     </section>
+    <!-- /SECTION TESTIMONIALS -->
+
+    <!-- SECTION REQUEST FREE QUOTE -->
     <section class="request-free-quote">
       <div class="small-container">
         <h2>Request A Free Quote</h2>
@@ -62,6 +78,7 @@
         <button class="btn-small">CLICK HERE</button>
       </div>
     </section>
+    <!-- /SECTION REQUEST FREE QUOTE -->
   </main>
 
 </template>
@@ -100,7 +117,6 @@ export default {
       span{
         color: $white;
         font-size: 12px;
-
       }
     }
     .award-winning{
@@ -115,7 +131,6 @@ export default {
         font-weight: 700;
         color: $lima-darkVibrant;
       }
-      
     }
     .full-service{
       height: 670px;
@@ -210,7 +225,6 @@ export default {
           font-weight: 700;
         }
       }
-
     }
   }
 </style>
