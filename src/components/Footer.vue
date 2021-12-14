@@ -2,7 +2,7 @@
 
   <footer>
     <div class="top-footer">
-      <div class="container">
+      <div class="big-container">
         <div class="small-container align-items-start me-5 justify-content-around">
           <span>ABOUT</span>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod amet repellat vero placeat fugit et commodi nulla exercitationem excepturi, officiis ullam explicabo quo voluptas, accusantium quos illum veritatis harum in.</p>
@@ -69,7 +69,7 @@ export default {
       @include flex('center');
       height: 300px;
       border-top: 10px solid $lima;
-      .container{
+      .big-container{
         @include flex('');
         .logo-footer{
           width: 120px;

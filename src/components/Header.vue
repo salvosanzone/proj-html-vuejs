@@ -1,8 +1,8 @@
 <template>
 
   <header>
-    <div class="top-header d-flex justify-content-center align-items-center">
-      <div class="container">
+    <div class="top-header">
+      <div class="big-container">
         <div>
           <a class="" href="">
             <i class="fas fa-phone me-2"></i>
@@ -25,8 +25,8 @@
         </div>
       </div>
     </div>
-    <div class="bottom-header">
-       <div class="container">
+    <div class="bottom-header d-flex align-items-center flex-column">
+      <div class="menu-bottom-header big-container">
         <div class="row align-items-baseline">
           <div class="col-1">
             <div class="logo">
@@ -37,38 +37,38 @@
             <div class="menu">
               <ul class="d-flex justify-content-center align-items-center">
                 <li>
-                  <a href=""> <strong> Home </strong> </a>
+                  <a href="">  Home </a>
                 </li>
                 <li>
-                  <a href=""> <strong> Rates </strong> </a>
+                  <a href="">  Rates  </a>
                 </li>
                 <li>
-                  <a href=""> <strong> Testimonials </strong> </a>
+                  <a href="">  Testimonials </a>
                 </li>
                 <li>
-                  <a href=""> <strong> FAQ </strong> </a>
+                  <a href=""> FAQ </a>
                 </li>
                 <li>
-                  <a href=""> <strong> Blog </strong> </a>
+                  <a href=""> Blog </a>
                 </li>
                 <li>
-                  <a href=""> <strong> Contact </strong> </a>
+                  <a href="">  Contact  </a>
                 </li>
                 
                 <li>
                   <a href="">
-                    <button class="btn-small"> <strong> FREE QUOTE </strong> </button>
+                    <button class="btn-small">  FREE QUOTE </button>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </div> 
-      <div class="small-container">
-        <span>MOVING WITHOUT THE HASSLE</span>
-        <h2>WE MAKE IT SIMPLE</h2>
-        <span>PROFESSIONAL SERVICE WITH QUALITY AND CUSTOMER SATISFATION</span>
+      </div>
+      <div class="text-bottom-header small-container">
+          <span>MOVING WITHOUT THE HASSLE</span>
+          <h2>WE MAKE IT SIMPLE</h2>
+          <span>PROFESSIONAL SERVICE WITH QUALITY AND CUSTOMER SATISFATION</span>
       </div>
     </div>
   </header>
@@ -89,11 +89,11 @@ export default {
 header {
   .top-header {
     height: 30px;
+    @include flex('center');
     background-color: $lima;
     color: white;
-    .container {
+    .big-container {
       @include flex("between");
-      //border: 1px solid black;
       a {
         color: $white;
       }
@@ -105,28 +105,29 @@ header {
     background-image: url(../assets/img/avada-movers-homeherobackground-final.jpg);
     @include background("");
     background-size: 125%;
-    .container {
-      margin-bottom: 150px;
-      .logo {
+    position: relative;
+    .menu-bottom-header{
+      .logo{
         width: 120px;
       }
-      ul li {
-        list-style: none;
-        margin: 0 5px;
-
-        a {
-          text-decoration: none;
-          margin: 0 12px;
-          color: $black;
-        }
+      a{
+        color: $black;
+        font-weight: 800;
       }
     }
-    .small-container {
-      margin: 0 auto;
+    .text-bottom-header{
+      position: absolute;
+      top: 50%;
       span{
-        color: $oslo-gray;
+        color: $river-bed;
+        font-weight: 800;
+      }
+      h2{
+        font-weight: 800;
+        font-size: 40px;
       }
     }
+    
   }
 }
 </style>
