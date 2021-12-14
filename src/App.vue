@@ -16,6 +16,10 @@
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
+import menuHeader from './assets/data/menuHeader.js'
+import avadaMoversList from './assets/data/avadaMoversList.js'
+import recentPostsList  from './assets/data/recentPostsList.js'
+
 
 export default {
   name: 'App',
@@ -28,83 +32,9 @@ export default {
   data(){
     return {
       //creo tre array che invio tramite le props
-      menuHeader: [
-        {
-          name: 'Home',
-          id: 1,
-          actived: true
-        },
-        {
-          name: 'Rates',
-          id: 2,
-          aactived: false
-          
-        },
-        {
-          name: 'Testimonials',
-          id: 3,
-          actived: false
-        },
-        {
-          name: 'FAQ',
-          id: 4,
-          actived: false
-        },
-        {
-          name: 'Blog',
-          id: 5,
-          actived: false
-        },
-        {
-          name: 'Contact',
-          id: 6,
-          actived: false
-        },
-      ],
-      avadaMoversList: [
-        {
-          name: 'Home',
-          id: 1,
-          actived: true
-        },
-        {
-          name: 'Rates',
-          id: 2,
-          actived: false
-        },
-        {
-          name: 'Testimonials',
-          id: 3,
-          actived: false
-        },
-        {
-          name: 'Blog',
-          id: 4,
-          actived: false
-        },
-        {
-          name: 'Free Quote',
-          id: 5,
-          actived: false
-        },
-      ],
-      recentPostsList: [
-        {
-          name: 'Heading Out To College?',
-        },
-        {
-          name: 'Moving Your Business?',
-        },
-        {
-          name: 'Outstanding Quality',
-        },
-        {
-          name: 'Cost Of Moving',
-        },
-        {
-          name: 'Best Moving Tips',
-        },
-      ]
+      menuHeader,
+      avadaMoversList,
+      recentPostsList 
     }
   }
 }

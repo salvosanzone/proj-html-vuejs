@@ -69,6 +69,8 @@
 <script>
 import Card from './Cards.vue'
 import Testimonials from './Testimonials.vue'
+import cardList from '../assets/data/cardList.js'
+import testimonialsList from '../assets/data/testimonialsList.js'
 export default {
   name: 'Main',
   components:{
@@ -77,38 +79,8 @@ export default {
   },
   data(){
     return{
-      cardList: [
-        {
-          photo: "serviceonephoto-final-400x255.jpg",
-          title: 'Two Man Teams',
-          id: 1
-        },
-        {
-          photo: "servicetwophoto-final-400x255.jpg",
-          title: 'We Do All The Lifting',
-          id: 2
-        },
-        {
-          photo: "servicethreephoto-final-400x255.jpg",
-          title: 'Coast To Coast',
-          id: 3
-        },
-      ],
-
-      testimonialsList: [
-        {
-          photo: "johndoe-final-200x200.jpg",
-          name: 'John Doe'
-        },
-        {
-          photo: "janedoe-final-200x200.jpg",
-          name: 'Jane Doe'
-        },
-        {
-          photo: "johnsmith-final-200x200.jpg",
-          name: 'John Smith'
-        },
-      ]
+      cardList, 
+      testimonialsList
     }
   }
 }
