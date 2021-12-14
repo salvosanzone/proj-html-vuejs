@@ -57,15 +57,44 @@
       </div>
     </section>
     <section class="move-with-ease">
-      move whith ease
+      <div class="container">
+        <div class="content flex-column">
+          <span>WE REMOVE THE HEADACHE FROM MOVING</span>
+          <h2>Move with Ease</h2>
+          <p>With our super simple service we can take you from getting a quote, right throught to being in your new home with all of your belongings securely packed and safely delivered, even in the rooms of your choice.</p>
+          <button class="btn-big">GET A FREE QUOTE NOW</button>
+        </div>
+      </div>
     </section>
     <section class="testimonials">
       <div class="small-container">
-        testimonials
+        <span>HAPPY CUSTOMERS</span>
+        <h2>Testimonials</h2>
       </div>
-      <div class="container">
-        column
+      <div class="container my-5">
+        <div class="small-container mx-5">
+          <div class="testimonial-pic">
+            <img src="../assets/img/avada-movers-johndoe-final-200x200.jpg" alt="">
+          </div>
+          <h4>John Doe</h4>
+          <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut accusantium deserunt esse sapiente consequuntur aperiam architecto assumenda ullam minima soluta voluptas recusandae excepturi, ducimus repudiandae? Vitae maiores suscipit eaque?</p>
+        </div>
+        <div class="small-container mx-5">
+          <div class="testimonial-pic">
+            <img src="../assets/img/avada-movers-janedoe-final-200x200.jpg" alt="">
+          </div>
+          <h4>Jane Doe</h4>
+          <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut accusantium deserunt esse sapiente consequuntur aperiam architecto assumenda ullam minima soluta voluptas recusandae excepturi, ducimus repudiandae? Vitae maiores suscipit eaque?</p>
+        </div>
+        <div class="small-container mx-5">
+          <div class="testimonial-pic">
+            <img src="../assets/img/avada-movers-johnsmith-final-200x200.jpg" alt="">
+          </div>
+          <h4>John Smith</h4>
+          <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ut accusantium deserunt esse sapiente consequuntur aperiam architecto assumenda ullam minima soluta voluptas recusandae excepturi, ducimus repudiandae? Vitae maiores suscipit eaque?</p>
+        </div>
       </div>
+      <button class="btn-big">READ MORE TESTIMONIALS</button>
     </section>
     <section class="request-free-quote">
       <div class="small-container">
@@ -102,7 +131,7 @@ export default {
     }
     .award-winning{
       height: 445px;
-      background-image: linear-gradient(white, $mercury);
+      background-color: rgba($color: $mercury, $alpha: .2);
       //@include flex('center');
     }
     .full-service{
@@ -114,14 +143,15 @@ export default {
         .card{
           display: flex;
           justify-content: space-between;
-          width: calc(100% / 3 - 20px);
-          height: 370px;
-          margin: 0 20px;
+          width: calc(100% / 3 - 17px);
+          height: 406px;
+          margin: 0 17px;
           padding: 15px;
-          background-color: $mercury;
+          background-color: rgba($color: $mercury, $alpha: .4);
+          border-color: $white;
         }
         .text-card{
-          padding: 5px;
+          padding: 22px 17px;
           background-color: $white;
         }
 
@@ -131,11 +161,33 @@ export default {
       height: 535px;
       background-image: url(../assets/img/avada-movers-movewithease-background-new.jpg);
       @include background('');
+      .container{
+        display: flex;
+        justify-content: end;
+        .content{
+          width: 415px;
+          height: 295px;
+          padding: 40px;
+          border: 11px solid #5ca70a;
+          @include flex('center');
+          background-color: $lima;
+          color: $white;
+        }
+      }
     }
     .testimonials{
       height: 670px;
       background-image: url(../assets/img/avada-movers-testimonial-background.jpg);
       @include background('');
+      .container{
+        @include flex('');
+        .testimonial-pic{
+          width: 100px;
+          height: 100px;
+          overflow: hidden;
+          border-radius: 50%;
+        }
+      }
       
     }
     .request-free-quote{

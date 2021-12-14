@@ -104,6 +104,7 @@ header {
     padding: 10px;
     background-image: url(../assets/img/avada-movers-homeherobackground-final.jpg);
     @include background("");
+    background-size: 125%;
     .container {
       margin-bottom: 150px;
       .logo {
